@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的生活</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: url('images/bg.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 42px;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            font-weight: 500;
+        }
+
+        .photo-wall {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .photo {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        .photo:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-link a {
+            display: inline-block;
+            padding: 10px 40px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .back-link a:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>我的生活</h1>
+    <div class="photo-wall">
+        <div class="row">
+            <div class="photo">
+                <img src="images/life1.jpg" alt="照片1" class="photo-img">
+            </div>
+            <div class="photo">
+                <img src="images/life2.jpg" alt="照片2" class="photo-img">
+            </div>
+            <div class="photo">
+                <img src="images/life3.jpg" alt="照片3" class="photo-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="photo">
+                <img src="images/life4.jpg" alt="照片4" class="photo-img">
+            </div>
+            <div class="photo">
+                <img src="images/life5.jpg" alt="照片5" class="photo-img">
+            </div>
+            <div class="photo">
+                <img src="images/life6.jpg" alt="照片6" class="photo-img">
+            </div>
+        </div>
+    </div>
+    <div class="back-link">
+        <a href="main.html">返回主界面</a>
+    </div>
+</body>
+</html>

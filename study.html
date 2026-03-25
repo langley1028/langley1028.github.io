@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习内容</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: url('images/bg.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 42px;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            font-weight: 500;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* 有序列表，去掉默认数字 */
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            color: white;
+            font-size: 18px;
+            padding: 14px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+        }
+
+        /* 自定义数字样式 */
+        .number {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .back-link {
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            display: inline-block;
+            padding: 10px 40px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .back-link a:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>学习内容</h1>
+    <div class="content">
+        <ol>
+            <li><span class="number">1</span> 专业基础：高等数学、线性代数、离散数学、概率论</li>
+            <li><span class="number">2</span> 硬件基础：大学物理、数字电子技术</li>
+            <li><span class="number">3</span> 编程语言：C、C++、Java、Python、J2EE</li>
+            <li><span class="number">4</span> 开发工具：VS Code、Eclipse、Git、SQL SERVER</li>
+            <li><span class="number">5</span> 学习目标：独立完成一个完整的Web项目</li>
+            <li><span class="number">6</span> 职业方向：Java后端开发 / 全栈方向</li>
+        </ol>
+    </div>
+    <div class="back-link">
+        <a href="main.html">返回主界面</a>
+    </div>
+</body>
+</html>
