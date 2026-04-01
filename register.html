@@ -225,6 +225,7 @@
     <script>
         let currentCaptcha = '';
 
+        // 生成随机验证码（4位数字+字母）
         function generateCaptcha() {
             const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789';
             let result = '';
@@ -234,11 +235,13 @@
             return result;
         }
 
+        // 刷新验证码
         function refreshCaptcha() {
             currentCaptcha = generateCaptcha();
             document.getElementById('captchaText').innerHTML = currentCaptcha;
         }
 
+        // 注册函数
         function register() {
             const username = document.getElementById('regUser').value;
             const password = document.getElementById('regPass').value;
@@ -247,6 +250,7 @@
             const email = document.getElementById('email').value;
             const captchaInput = document.getElementById('captchaInput').value;
 
+            // 简单验证
             if (!username || !password || !phone || !email) {
                 alert('请填写完整信息');
                 return;
@@ -266,6 +270,7 @@
                 return;
             }
 
+            // 保存到 localStorage
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
             localStorage.setItem('phone', phone);
@@ -275,6 +280,7 @@
             window.location.href = 'login.html';
         }
 
+        // 页面加载时生成验证码
         refreshCaptcha();
     </script>
 </body>
