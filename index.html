@@ -40,7 +40,6 @@
             margin: 0 1.5% 25px 1.5%;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border-radius: 20px;
             padding: 25px 20px;
             text-align: center;
@@ -58,7 +57,6 @@
             font-size: 22px;
             margin-bottom: 20px;
             font-weight: 500;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
 
         .card-img {
@@ -138,14 +136,11 @@
 
     <script>
         function goToPage(page) {
-            // 检查是否已经登录
-            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn');
             if (isLoggedIn === 'true') {
-                // 已登录，直接跳转
                 window.location.href = page;
             } else {
-                // 未登录，先存下要去哪个页面，再跳登录页
-                localStorage.setItem('redirectAfterLogin', page);
+                sessionStorage.setItem('redirectAfterLogin', page);
                 window.location.href = 'login.html';
             }
         }
